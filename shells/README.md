@@ -1,3 +1,3 @@
-## A New Post
+## Shells
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click test
+A collection of unique reverse-tcp shells, one-liners and other cool methods for getting your shell accross the network
