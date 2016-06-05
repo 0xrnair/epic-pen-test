@@ -1,7 +1,7 @@
 ## Reverse Shell One-liners
 These are a list of shell one liners which be invoked on most of UNIX systems
 
-For all these below mentioned you should be listening on your attack box 
+For all these below mentioned you should be listening on your attack box ;make sure to change the 127.0.0.1 to your attacker listening IP!
 
 ### 1. Netcat
 
