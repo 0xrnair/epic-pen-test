@@ -13,6 +13,5 @@ A general outline looks like the following
 	- Pivoting
 
 
-My writings will be weighted more towards post-exp due to the fact that it felt like the most hardest IMHO.
+My writings will be weighted more towards post-exp due to the fact that it felt like the most hardest IMHO.  
 _Further Updates to this in the future ^_
-
