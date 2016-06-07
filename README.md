@@ -1,4 +1,4 @@
-# **OSCP**
+# **EPIC Pen Test Collection**
 This is a collection of useful scripts, tips and cheatsheet which I have compiled during my OSCP (Offensive Security Certified Professional) Lab and exam. At times of darkness when I was frustrated and ready to throw in the towel these were the guiding light that kept me on track  
 
 
